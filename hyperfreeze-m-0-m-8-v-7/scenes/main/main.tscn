@@ -1,0 +1,211 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_main"]
+[ext_resource type="Script" path="res://scenes/ui/starfield.gd" id="2_stars"]
+[ext_resource type="PackedScene" path="res://scenes/stations/order_station.tscn" id="3_order"]
+[ext_resource type="PackedScene" path="res://scenes/stations/build_station.tscn" id="4_build"]
+[ext_resource type="PackedScene" path="res://scenes/stations/zap_station.tscn" id="5_zap"]
+[ext_resource type="PackedScene" path="res://scenes/stations/top_station.tscn" id="6_top"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ticket_rail.tscn" id="7_rail"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="8_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/station_tabs.tscn" id="9_tabs"]
+[ext_resource type="Script" path="res://scenes/ui/pause_menu.gd" id="10_pause"]
+[ext_resource type="Script" path="res://scenes/ui/score_card.gd" id="11_score"]
+[ext_resource type="Script" path="res://scenes/ui/day_end_screen.gd" id="12_dayend"]
+[ext_resource type="Script" path="res://scenes/ui/shop_panel.gd" id="13_shop"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_main")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0431, 0.051, 0.1647, 1)
+
+[node name="Starfield" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_stars")
+
+[node name="Stations" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 252.0
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="OrderStation" parent="Stations" instance=ExtResource("3_order")]
+layout_mode = 1
+
+[node name="BuildStation" parent="Stations" instance=ExtResource("4_build")]
+visible = false
+layout_mode = 1
+
+[node name="ZapStation" parent="Stations" instance=ExtResource("5_zap")]
+visible = false
+layout_mode = 1
+
+[node name="TopStation" parent="Stations" instance=ExtResource("6_top")]
+visible = false
+layout_mode = 1
+
+[node name="TopBar" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = -16.0
+offset_bottom = 248.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="TicketRail" parent="TopBar" instance=ExtResource("7_rail")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HUD" parent="TopBar" instance=ExtResource("8_hud")]
+layout_mode = 2
+
+[node name="StationTabs" parent="." instance=ExtResource("9_tabs")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="FxLayer" type="Control" parent="." groups=["fx_layer"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Banner" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -150.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"BannerLabel"
+text = "Day 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BannerSub" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 10.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"HudValue"
+text = "Hyperfreeze is open!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Toast" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 262.0
+offset_right = 400.0
+offset_bottom = 312.0
+grow_horizontal = 2
+theme_type_variation = &"ToastLabel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreCard" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_score")
+
+[node name="DayEndScreen" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_dayend")
+
+[node name="ShopPanel" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("13_shop")
+
+[node name="PauseMenu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_pause")
+
+[node name="Fade" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

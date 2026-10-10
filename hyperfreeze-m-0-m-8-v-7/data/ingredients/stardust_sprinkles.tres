@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ingredient_data.gd" id="1_pb8kf"]
+
+[resource]
+script = ExtResource("1_pb8kf")
+id = &"stardust_sprinkles"
+display_name = "Stardust Sprinkles"
+category = 3
+color = Color(1, 0.956863, 0.690196, 1)
+unlock_rank = 1

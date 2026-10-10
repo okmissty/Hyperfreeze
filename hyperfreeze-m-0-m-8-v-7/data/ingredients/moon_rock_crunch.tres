@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ingredient_data.gd" id="1_0dsb5"]
+
+[resource]
+script = ExtResource("1_0dsb5")
+id = &"moon_rock_crunch"
+display_name = "Moon Rock Crunch"
+category = 1
+color = Color(0.788235, 0.768627, 0.741176, 1)
+unlock_rank = 1

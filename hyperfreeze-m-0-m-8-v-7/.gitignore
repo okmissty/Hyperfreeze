@@ -1,0 +1,5 @@
+# Godot cache, regenerated on import
+.godot/
+*.tmp
+# Export output
+build/

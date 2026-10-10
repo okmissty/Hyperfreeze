@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/ticket_rail.gd" id="1_rail"]
+
+[node name="TicketRail" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 236)
+offset_right = 1400.0
+offset_bottom = 236.0
+theme_type_variation = &"RailPanel"
+script = ExtResource("1_rail")
+
+[node name="Track" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 1
+
+[node name="EmptyLabel" type="Label" parent="Track"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"SubtitleLabel"
+text = "No tickets yet. Take an order at the counter!"
+horizontal_alignment = 1
+vertical_alignment = 1

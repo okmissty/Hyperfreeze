@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ingredient_data.gd" id="1_dqvmr"]
+
+[resource]
+script = ExtResource("1_dqvmr")
+id = &"quasar_fudge"
+display_name = "Quasar Fudge"
+category = 2
+color = Color(0.290196, 0.164706, 0.12549, 1)
+unlock_rank = 6

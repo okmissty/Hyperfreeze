@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CustomerData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/customer_data.gd" id="1_htqim"]
+
+[resource]
+script = ExtResource("1_htqim")
+id = &"glimmer"
+display_name = "Glimmer"
+species = 2
+unlock_rank = 2
+body_color = Color(0.560784, 0.960784, 0.941176, 1)
+accent_color = Color(0.168627, 0.709804, 0.682353, 1)
+patience_seconds = 42.0
+base_tip_cents = 300
+top_weight = 1.5
+preferred_size = -1
+preferred_zap = -1
+mixin_count = Vector2i(1, 2)
+topper_count = Vector2i(2, 4)
+cream_chance = 0.8
+sauce_chance = 0.9
+sprinkle_chance = 0.6

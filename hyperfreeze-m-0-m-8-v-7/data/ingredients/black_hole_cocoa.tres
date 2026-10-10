@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ingredient_data.gd" id="1_37ai2"]
+
+[resource]
+script = ExtResource("1_37ai2")
+id = &"black_hole_cocoa"
+display_name = "Black Hole Cocoa"
+category = 0
+color = Color(0.352941, 0.227451, 0.180392, 1)
+unlock_rank = 1

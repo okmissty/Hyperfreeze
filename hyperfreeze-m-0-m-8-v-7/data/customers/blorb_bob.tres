@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CustomerData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/customer_data.gd" id="1_yuoab"]
+
+[resource]
+script = ExtResource("1_yuoab")
+id = &"blorb_bob"
+display_name = "Blorb Bob"
+species = 0
+unlock_rank = 1
+body_color = Color(0.482353, 0.878431, 0.647059, 1)
+accent_color = Color(0.239216, 0.6, 0.439216, 1)
+patience_seconds = 50.0
+base_tip_cents = 300
+top_weight = 1.0
+preferred_size = -1
+preferred_zap = -1
+mixin_count = Vector2i(1, 1)
+topper_count = Vector2i(1, 2)
+cream_chance = 0.9
+sauce_chance = 0.9
+sprinkle_chance = 0.4

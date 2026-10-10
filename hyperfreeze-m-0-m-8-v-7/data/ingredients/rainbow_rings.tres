@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ingredient_data.gd" id="1_w84l5"]
+
+[resource]
+script = ExtResource("1_w84l5")
+id = &"rainbow_rings"
+display_name = "Rainbow Rings"
+category = 3
+color = Color(1, 0.494118, 0.713726, 1)
+unlock_rank = 4

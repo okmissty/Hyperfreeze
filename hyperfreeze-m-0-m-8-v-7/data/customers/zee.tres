@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CustomerData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/customer_data.gd" id="1_kc23b"]
+
+[resource]
+script = ExtResource("1_kc23b")
+id = &"zee"
+display_name = "Zee"
+species = 1
+unlock_rank = 1
+body_color = Color(1, 0.85098, 0.352941, 1)
+accent_color = Color(0.788235, 0.603922, 0.117647, 1)
+patience_seconds = 28.0
+base_tip_cents = 250
+top_weight = 1.0
+preferred_size = 0
+preferred_zap = 0
+mixin_count = Vector2i(1, 2)
+topper_count = Vector2i(1, 2)
+cream_chance = 0.8
+sauce_chance = 0.9
+sprinkle_chance = 0.6

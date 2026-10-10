@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CustomerData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/customer_data.gd" id="1_lnosa"]
+
+[resource]
+script = ExtResource("1_lnosa")
+id = &"captain_nova"
+display_name = "Captain Nova"
+species = 4
+unlock_rank = 5
+body_color = Color(0.956863, 0.945098, 1, 1)
+accent_color = Color(1, 0.494118, 0.713726, 1)
+patience_seconds = 35.0
+base_tip_cents = 900
+top_weight = 1.0
+preferred_size = -1
+preferred_zap = -1
+mixin_count = Vector2i(2, 3)
+topper_count = Vector2i(3, 4)
+cream_chance = 1.0
+sauce_chance = 1.0
+sprinkle_chance = 1.0

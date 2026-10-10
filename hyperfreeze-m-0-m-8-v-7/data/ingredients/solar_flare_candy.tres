@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ingredient_data.gd" id="1_jav4t"]
+
+[resource]
+script = ExtResource("1_jav4t")
+id = &"solar_flare_candy"
+display_name = "Solar Flare Popping Candy"
+category = 1
+color = Color(1, 0.541176, 0.239216, 1)
+unlock_rank = 5

@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/stations/zap_station.gd" id="1_zap"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ticket_slot.tscn" id="2_slot"]
+
+[node name="ZapStation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_zap")
+station_id = &"zap"
+
+[node name="WorkPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = -412.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"WorkPanel"
+
+[node name="Work" type="HBoxContainer" parent="WorkPanel"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="ShelfColumn" type="VBoxContainer" parent="WorkPanel/Work"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ShelfCaption" type="Label" parent="WorkPanel/Work/ShelfColumn"]
+layout_mode = 2
+theme_type_variation = &"SectionCaption"
+text = "WAITING TO ZAP"
+
+[node name="EmptyShelf" type="Label" parent="WorkPanel/Work/ShelfColumn"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_type_variation = &"SlotHint"
+text = "Cups sent from the Build Station wait here."
+autowrap_mode = 3
+
+[node name="ShelfScroll" type="ScrollContainer" parent="WorkPanel/Work/ShelfColumn"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Shelf" type="VBoxContainer" parent="WorkPanel/Work/ShelfColumn/ShelfScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="Blenders" type="HBoxContainer" parent="WorkPanel/Work"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="TicketSlot" parent="." instance=ExtResource("2_slot")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -392.0
+offset_top = 20.0
+offset_right = -40.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 2
+station_id = &"zap"

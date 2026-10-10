@@ -1,0 +1,169 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/stations/build_station.gd" id="1_build"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ticket_slot.tscn" id="2_slot"]
+[ext_resource type="Script" path="res://scenes/ui/size_button.gd" id="3_size"]
+[ext_resource type="Script" path="res://scenes/ui/cup_view.gd" id="4_view"]
+
+[node name="BuildStation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_build")
+station_id = &"build"
+
+[node name="WorkPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = -412.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"WorkPanel"
+
+[node name="Work" type="VBoxContainer" parent="WorkPanel"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Main" type="HBoxContainer" parent="WorkPanel/Work"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="TapsColumn" type="VBoxContainer" parent="WorkPanel/Work/Main"]
+custom_minimum_size = Vector2(330, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TapsCaption" type="Label" parent="WorkPanel/Work/Main/TapsColumn"]
+layout_mode = 2
+theme_type_variation = &"SectionCaption"
+text = "BASE TAPS  ·  HOLD TO POUR"
+
+[node name="Taps" type="GridContainer" parent="WorkPanel/Work/Main/TapsColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 8
+columns = 1
+
+[node name="Center" type="VBoxContainer" parent="WorkPanel/Work/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="CupRow" type="HBoxContainer" parent="WorkPanel/Work/Main/Center"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="Cups" type="VBoxContainer" parent="WorkPanel/Work/Main/Center/CupRow"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="CupsCaption" type="Label" parent="WorkPanel/Work/Main/Center/CupRow/Cups"]
+layout_mode = 2
+theme_type_variation = &"SectionCaption"
+text = "CUP SIZE"
+horizontal_alignment = 1
+
+[node name="Small" type="Button" parent="WorkPanel/Work/Main/Center/CupRow/Cups"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(112, 132)
+layout_mode = 2
+script = ExtResource("3_size")
+
+[node name="Medium" type="Button" parent="WorkPanel/Work/Main/Center/CupRow/Cups"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(112, 132)
+layout_mode = 2
+script = ExtResource("3_size")
+cup_size = 1
+
+[node name="Large" type="Button" parent="WorkPanel/Work/Main/Center/CupRow/Cups"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(112, 132)
+layout_mode = 2
+script = ExtResource("3_size")
+cup_size = 2
+
+[node name="CupView" type="Control" parent="WorkPanel/Work/Main/Center/CupRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("4_view")
+
+[node name="FillLabel" type="Label" parent="WorkPanel/Work/Main/Center"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"StatusLabel"
+horizontal_alignment = 1
+
+[node name="MixIns" type="VBoxContainer" parent="WorkPanel/Work/Main"]
+custom_minimum_size = Vector2(330, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MixCaption" type="Label" parent="WorkPanel/Work/Main/MixIns"]
+layout_mode = 2
+theme_type_variation = &"SectionCaption"
+text = "MIX-INS  ·  TAP TO ADD/REMOVE"
+
+[node name="MixGrid" type="GridContainer" parent="WorkPanel/Work/Main/MixIns"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 8
+columns = 1
+
+[node name="Bottom" type="HBoxContainer" parent="WorkPanel/Work"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Trash" type="Button" parent="WorkPanel/Work/Bottom"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+theme_type_variation = &"SecondaryButton"
+text = "Trash cup"
+
+[node name="Status" type="Label" parent="WorkPanel/Work/Bottom"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"StatusLabel"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Send" type="Button" parent="WorkPanel/Work/Bottom"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "Send to Zap"
+
+[node name="TicketSlot" parent="." instance=ExtResource("2_slot")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -392.0
+offset_top = 20.0
+offset_right = -40.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 2
+station_id = &"build"

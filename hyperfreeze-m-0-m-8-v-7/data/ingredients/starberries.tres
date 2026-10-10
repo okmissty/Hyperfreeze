@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ingredient_data.gd" id="1_n6oga"]
+
+[resource]
+script = ExtResource("1_n6oga")
+id = &"starberries"
+display_name = "Starberries"
+category = 1
+color = Color(0.878431, 0.25098, 0.368627, 1)
+unlock_rank = 9

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CustomerData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/customer_data.gd" id="1_tc3am"]
+
+[resource]
+script = ExtResource("1_tc3am")
+id = &"tonn"
+display_name = "Tonn"
+species = 3
+unlock_rank = 3
+body_color = Color(0.556863, 0.54902, 0.788235, 1)
+accent_color = Color(0.305882, 0.298039, 0.560784, 1)
+patience_seconds = 60.0
+base_tip_cents = 400
+top_weight = 1.0
+preferred_size = 2
+preferred_zap = -1
+mixin_count = Vector2i(2, 3)
+topper_count = Vector2i(1, 3)
+cream_chance = 0.8
+sauce_chance = 0.9
+sprinkle_chance = 0.6

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/ingredient_data.gd" id="1_8xlao"]
+
+[resource]
+script = ExtResource("1_8xlao")
+id = &"meteor_bites"
+display_name = "Meteor Bites"
+category = 1
+color = Color(0.54902, 0.431373, 0.364706, 1)
+unlock_rank = 1

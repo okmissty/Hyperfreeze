@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/station_tabs.gd" id="1_tabs"]
+[ext_resource type="Script" path="res://scenes/ui/station_tab_button.gd" id="2_btn"]
+
+[node name="StationTabs" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 128)
+offset_right = 1920.0
+offset_bottom = 128.0
+theme_type_variation = &"TabsPanel"
+script = ExtResource("1_tabs")
+
+[node name="Row" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="OrderTab" type="Button" parent="Row"]
+custom_minimum_size = Vector2(300, 96)
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Order Station (1)"
+text = "Order"
+script = ExtResource("2_btn")
+station_id = &"order"
+
+[node name="BuildTab" type="Button" parent="Row"]
+custom_minimum_size = Vector2(300, 96)
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Build Station (2)"
+text = "Build"
+script = ExtResource("2_btn")
+station_id = &"build"
+
+[node name="ZapTab" type="Button" parent="Row"]
+custom_minimum_size = Vector2(300, 96)
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Zap Station (3)"
+text = "Zap"
+script = ExtResource("2_btn")
+station_id = &"zap"
+
+[node name="TopTab" type="Button" parent="Row"]
+custom_minimum_size = Vector2(300, 96)
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Top Station (4)"
+text = "Top"
+script = ExtResource("2_btn")
+station_id = &"top"

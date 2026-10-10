@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="RankTable" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/rank_table.gd" id="1_5cbsb"]
+
+[resource]
+script = ExtResource("1_5cbsb")
+xp_thresholds = PackedInt32Array(0, 150, 400, 750, 1200, 1800, 2500, 3300, 4200, 5200)

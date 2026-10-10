@@ -1,0 +1,44 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Hyperfreeze"
+config/description="A Papa's-style cosmic café: serve out-of-this-world frozen treats to alien customers."
+run/main_scene="res://scenes/menus/title_screen.tscn"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Events="*res://autoload/events.gd"
+GameState="*res://autoload/game_state.gd"
+DayManager="*res://autoload/day_manager.gd"
+AudioManager="*res://autoload/audio_manager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[gui]
+
+theme/custom="res://themes/cafe_theme.tres"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=2
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.0431, 0.051, 0.1647, 1)

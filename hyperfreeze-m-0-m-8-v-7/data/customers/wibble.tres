@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CustomerData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/customer_data.gd" id="1_ni6c6"]
+
+[resource]
+script = ExtResource("1_ni6c6")
+id = &"wibble"
+display_name = "Wibble"
+species = 0
+unlock_rank = 1
+body_color = Color(1, 0.701961, 0.819608, 1)
+accent_color = Color(0.760784, 0.352941, 0.521569, 1)
+patience_seconds = 45.0
+base_tip_cents = 300
+top_weight = 1.0
+preferred_size = -1
+preferred_zap = -1
+mixin_count = Vector2i(1, 2)
+topper_count = Vector2i(2, 3)
+cream_chance = 0.8
+sauce_chance = 0.9
+sprinkle_chance = 0.6

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CustomerData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/customer_data.gd" id="1_0lifm"]
+
+[resource]
+script = ExtResource("1_0lifm")
+id = &"zib"
+display_name = "Zib"
+species = 1
+unlock_rank = 1
+body_color = Color(1, 0.623529, 0.407843, 1)
+accent_color = Color(0.760784, 0.376471, 0.176471, 1)
+patience_seconds = 30.0
+base_tip_cents = 250
+top_weight = 1.0
+preferred_size = 0
+preferred_zap = -1
+mixin_count = Vector2i(1, 2)
+topper_count = Vector2i(1, 2)
+cream_chance = 0.8
+sauce_chance = 0.9
+sprinkle_chance = 0.6

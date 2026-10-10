@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/hud.gd" id="1_hud"]
+
+[node name="HUD" type="PanelContainer"]
+custom_minimum_size = Vector2(560, 0)
+offset_right = 560.0
+offset_bottom = 236.0
+script = ExtResource("1_hud")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Row" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="Day" type="VBoxContainer" parent="Layout/Row"]
+layout_mode = 2
+alignment = 1
+
+[node name="Caption" type="Label" parent="Layout/Row/Day"]
+layout_mode = 2
+theme_type_variation = &"HudCaption"
+text = "DAY"
+horizontal_alignment = 1
+
+[node name="DayValue" type="Label" parent="Layout/Row/Day"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HudValue"
+text = "1"
+horizontal_alignment = 1
+
+[node name="Time" type="VBoxContainer" parent="Layout/Row"]
+layout_mode = 2
+alignment = 1
+
+[node name="Caption" type="Label" parent="Layout/Row/Time"]
+layout_mode = 2
+theme_type_variation = &"HudCaption"
+text = "TIME"
+horizontal_alignment = 1
+
+[node name="ClockValue" type="Label" parent="Layout/Row/Time"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"HudValue"
+text = "9:00 AM"
+horizontal_alignment = 1
+
+[node name="Tips" type="VBoxContainer" parent="Layout/Row"]
+layout_mode = 2
+alignment = 1
+
+[node name="Caption" type="Label" parent="Layout/Row/Tips"]
+layout_mode = 2
+theme_type_variation = &"HudCaption"
+text = "TIPS"
+horizontal_alignment = 1
+
+[node name="MoneyValue" type="Label" parent="Layout/Row/Tips"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HudValue"
+text = "$0.00"
+horizontal_alignment = 1
+
+[node name="PauseButton" type="Button" parent="Layout/Row"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 80)
+layout_mode = 2
+size_flags_vertical = 4
+focus_mode = 0
+tooltip_text = "Pause and settings (Esc)"
+theme_type_variation = &"TabButton"
+text = "II"
+
+[node name="Shift" type="HBoxContainer" parent="Layout"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="OpenLabel" type="Label" parent="Layout/Shift"]
+layout_mode = 2
+theme_type_variation = &"HudCaption"
+text = "9 AM"
+
+[node name="ShiftBar" type="Control" parent="Layout/Shift"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="CloseLabel" type="Label" parent="Layout/Shift"]
+layout_mode = 2
+theme_type_variation = &"HudCaption"
+text = "6 PM"
+
+[node name="ShiftNote" type="Label" parent="Layout"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HudCaption"
+text = "Open 9 AM - 6 PM"
+horizontal_alignment = 1
