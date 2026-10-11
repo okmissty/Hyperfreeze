@@ -1,4 +1,5 @@
 # Hyperfreeze
+<img width="794" height="385" alt="image" src="https://github.com/user-attachments/assets/5df91d8f-9616-4e99-b932-662c763f43c0" />
 
 A Papa's Freezeria-style time-management game set in a cosmic café on a space station. Godot 4.3, GDScript, 2D.
 
@@ -79,6 +80,12 @@ The **Jukebox** adds a second café song; tap it in the lobby to switch tracks.
 Settings are saved between sessions.
 
 **Debug keys** (only when running from the editor): **F2** brings in a customer now, **F3** toggles 4× speed.
+<img width="794" height="446" alt="image" src="https://github.com/user-attachments/assets/a0220a4e-6246-4c51-b1c8-f8cd77c6532a" />
+<img width="794" height="391" alt="image" src="https://github.com/user-attachments/assets/a3d3c81d-5a40-4ad8-8f20-dedb98bf0766" />
+
+
+
+
 
 ## What's in M0–M8
 
